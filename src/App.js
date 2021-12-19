@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
+import Particles from "react-tsparticles";
 
 import Header from "./components/Header/Header";
 import Total from "./components/TotalPotComponent/Total";
@@ -74,11 +75,12 @@ const App = (props) => {
     }
   };
   return (
-    <div style={{ backgroundColor: "greenyellow", padding: "1%" }}>
+    <div style={{  padding: "1%" }}>
       <Header onMenuClick={(value) => handleUrlChange(value)} screen={url} />
       {url === 1 && <Home />}
       {url === 2 && <Contestants />}
       {url === 3 && <About />}
+      <Particles options={require("./assets/confetti.json")} />
     </div>
   );
 };

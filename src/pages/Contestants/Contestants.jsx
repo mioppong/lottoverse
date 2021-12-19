@@ -1,4 +1,5 @@
 import React from "react";
+import Total from "../../components/TotalPotComponent/Total";
 
 function Contestants() {
   return (
@@ -6,6 +7,11 @@ function Contestants() {
       Contestants
       <div>asfdasf</div>
       <div>asfdasf</div>
+      <Total />
+      <Total />
+      <Total />
+      <Total />
+      <Total />
     </div>
   );
 }

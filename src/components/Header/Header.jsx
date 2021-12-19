@@ -14,7 +14,7 @@ const Header = ({ onMenuClick }) => {
         width: "100%",
         display: "flex",
         flexDirection: "row",
-        backgroundColor: "yellow",
+        backgroundColor: "black",
         alignItems: "center",
         padding: "1%",
       }}
