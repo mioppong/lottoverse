@@ -5,11 +5,9 @@ import Total from "../../components/TotalPotComponent/Total";
 
 const Home = () => {
   return (
-    <div style={{ marginTop: 70, width: "100%", backgroundColor: "blue" }}>
+    <div style={{ padding: "1%", backgroundColor: "green" }}>
       Home\\
       <div>HOME</div>
-      <Total />
-      <Total />
       <Total />
     </div>
   );

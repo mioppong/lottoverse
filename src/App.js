@@ -22,27 +22,60 @@ const App = (props) => {
     const { pathname } = location;
     switch (pathname) {
       case "/":
+        nav("/home");
         setUrl(1);
+
         return;
       case "/home":
+        nav("/home");
         setUrl(1);
+
         return;
 
       case "/contestants":
+        nav("/contestants");
         setUrl(2);
+
         return;
       case "/about":
+        nav("/about");
         setUrl(3);
+
         return;
       default:
         nav("/home");
+        setUrl(1);
         return;
     }
   };
 
+  const handleUrlChange = (value) => {
+    switch (value) {
+      case 1:
+        nav("/home");
+        setUrl(1);
+
+        return;
+
+      case 2:
+        nav("/contestants");
+        setUrl(2);
+
+        return;
+      case 3:
+        nav("/about");
+        setUrl(3);
+
+        return;
+      default:
+        nav("/home");
+        setUrl(1);
+        return;
+    }
+  };
   return (
-    <div style={{  }}>
-      <Header />
+    <div style={{ backgroundColor: "greenyellow", padding: "1%" }}>
+      <Header onMenuClick={(value) => handleUrlChange(value)} screen={url} />
       {url === 1 && <Home />}
       {url === 2 && <Contestants />}
       {url === 3 && <About />}
