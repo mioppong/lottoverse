@@ -1,13 +1,9 @@
-import { LoadingButton } from "@mui/lab";
-import { AppBar, Button, Typography } from "@mui/material";
+import { AppBar, Button } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../Icons/Logo";
-import { myColors } from "../../styles";
 
-import styles from "./Header.css";
 import PlayComponent from "../PlayComponent/PlayComponent";
-import MyText from "../MyText/MyText";
 
 const Header = ({ onMenuClick }) => {
   const nav = useNavigate();
