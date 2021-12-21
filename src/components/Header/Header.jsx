@@ -1,7 +1,13 @@
 import { LoadingButton } from "@mui/lab";
-import { AppBar, Button } from "@mui/material";
+import { AppBar, Button, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Logo from "../../Icons/Logo";
+import { myColors } from "../../styles";
+
+import styles from "./Header.css";
+import PlayComponent from "../PlayComponent/PlayComponent";
+import MyText from "../MyText/MyText";
 
 const Header = ({ onMenuClick }) => {
   const nav = useNavigate();
@@ -10,7 +16,7 @@ const Header = ({ onMenuClick }) => {
       position="sticky"
       style={{
         height: 70,
-        borderRadius: 20,
+        // borderRadius: 20,
         width: "100%",
         display: "flex",
         flexDirection: "row",
@@ -19,8 +25,8 @@ const Header = ({ onMenuClick }) => {
         padding: "1%",
       }}
     >
-      <div>
-        <div style={{ height: 60, width: 60, backgroundColor: "red" }} />
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <Logo />
       </div>
 
       <div
@@ -30,16 +36,37 @@ const Header = ({ onMenuClick }) => {
           justifyContent: "center",
         }}
       >
-        <Button children="Home" onClick={() => onMenuClick(1)} />
-        <Button children="Contestants" onClick={() => onMenuClick(2)} />
-        <Button children="About" onClick={() => onMenuClick(3)} />
+        <Button
+          variant="contained"
+          children="Home"
+          onClick={() => onMenuClick(1)}
+          style={{
+            backgroundColor: "#FFD321",
+            color: "black",
+          }}
+        />
+        <Button
+          children="Contestants"
+          onClick={() => onMenuClick(2)}
+          style={{
+            backgroundColor: "#FFD321",
+            color: "black",
+
+            marginLeft: 10,
+            marginRight: 10,
+          }}
+        />
+        <Button
+          children="About"
+          onClick={() => onMenuClick(3)}
+          style={{
+            backgroundColor: "#FFD321",
+            color: "black",
+          }}
+        />
       </div>
 
-      <LoadingButton
-        style={{ marginLeft: "auto" }}
-        variant="contained"
-        children="Play"
-      />
+      <PlayComponent />
     </AppBar>
   );
 };

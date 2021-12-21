@@ -1,14 +1,18 @@
 import React from "react";
-import Particles from "react-tsparticles";
 
-import Header from "../../components/Header/Header";
 import Total from "../../components/TotalPotComponent/Total";
 
 const Home = () => {
   return (
-    <div style={{ padding: "1%" }}>
-      Home\\
-      <div>HOME</div>
+    <div
+      style={{
+        padding: "1%",
+        flex: 1,
+        display: "flex",
+        backgroundColor: "red",
+        opacity: 0.5,
+      }}
+    >
       <Total />
     </div>
   );
